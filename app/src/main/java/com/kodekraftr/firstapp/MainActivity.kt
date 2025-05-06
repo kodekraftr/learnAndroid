@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -36,15 +37,17 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Box(modifier = Modifier.fillMaxSize()) {
-                        BackgroundImage()
-                        GreetingText(
-                            wish = stringResource(R.string.happy_birthday),
-                            name = "Varun",
-                            from = "Me",
-                            modifier = Modifier.fillMaxSize()
-                        )
-                    }
+//                    Box(modifier = Modifier.fillMaxSize()) {
+//                        BackgroundImage()
+//                        GreetingText(
+//                            wish = stringResource(R.string.happy_birthday),
+//                            name = "Varun",
+//                            from = "Me",
+//                            modifier = Modifier.fillMaxSize()
+//                        )
+//                    }
+                    DiceRollerApp(modifier = Modifier.fillMaxSize()
+                        .wrapContentSize(Alignment.Center))
                 }
             }
         }
